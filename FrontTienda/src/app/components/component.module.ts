@@ -4,6 +4,7 @@ import { SliderComponent } from './slider/slider.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { MaterialModule } from '../material.module';
+import { GaleriaComponent } from './galeria/galeria.component';
 
 
 
@@ -11,12 +12,16 @@ import { MaterialModule } from '../material.module';
   declarations: [
     SliderComponent,
     SidebarComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    GaleriaComponent
   ],
   imports: [
     CommonModule,
     MaterialModule
   ],
-  exports:[SidebarComponent]
+  exports:[SidebarComponent,
+    SliderComponent,
+    BuscadorComponent,
+    GaleriaComponent]
 })
 export class ComponentModule { }

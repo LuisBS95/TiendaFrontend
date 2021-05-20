@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 250px;
+    color: white;
+}
+
+.example-header-image {
+    background-image: url('../../../assets/img/logo.jpg');
+    background-size: cover;
+}
+
+.fondo {
+    background-color: #000000;
+}
+
+.borde-img {
+    border-color: aqua;
+}

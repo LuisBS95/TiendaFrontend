@@ -12,6 +12,9 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material.module';
 import { ComponentModule } from './components/component.module';
 
+//Modulos especiales
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { ComponentModule } from './components/component.module';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    ComponentModule
+    ComponentModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
