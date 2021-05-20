@@ -9,6 +9,8 @@ import { AuthModule } from './Auth/auth.module';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './material.module';
+import { ComponentModule } from './components/component.module';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { SharedModule } from './shared/shared.module';
     PagesModule,
     AuthModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    MaterialModule,
+    ComponentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

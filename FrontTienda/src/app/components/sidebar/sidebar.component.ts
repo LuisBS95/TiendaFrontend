@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
+  showFiller = false;
+  categorias =[1,2,3,4];
   constructor() { }
 
   ngOnInit(): void {
