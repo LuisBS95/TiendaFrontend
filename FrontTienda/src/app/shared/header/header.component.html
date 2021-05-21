@@ -1,54 +1,59 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">ICONO</a>
+        <img src="../../../assets/img/cafe.jpg" width="80 px">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" activa aria-current="page" href="#">Home</a>
                 </li>
+                <!--
                 <li class="nav-item">
 
                     <a class="nav-link" href="#">Link</a>
                 </li>
+                -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Usuario
             </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <ul class="dropdown-menu dropa" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item drop" href="#">Perfil</a></li>
+                        <li><a class="dropdown-item drop" href="#">Another action</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item drop" href="#">Something else here</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Contacto
             </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fab fa-instagram text-success"></i> Instagram</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="far fa-envelope"></i> correo@mail.com</a></li>
+                    <ul class="dropdown-menu dropa" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item drop" href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+                        <li><a class="dropdown-item drop" href="#"><i class="fab fa-instagram text-success"></i> Instagram</a></li>
+                        <li><a class="dropdown-item drop" href="#"><i class="far fa-envelope"></i> correo@mail.com</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+
+            </ul>
+            <ul *ngIf="!isAutenticado" class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contacto
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ingresar
             </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fab fa-instagram text-success"></i> Instagram</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="far fa-envelope"></i> correo@mail.com</a></li>
+                    <ul class="dropdown-menu dropa" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item drop" (click)="Entrar()"><i class="fas fa-sign-in-alt"></i> Iniciar sesion</a></li>
+                        <li><a class="dropdown-item drop" (click)="Entrar()"><i class="fas fa-user-plus"></i> Registrarse</a></li>
                     </ul>
                 </li>
+            </ul>
+
+            <ul *ngIf="isAutenticado" class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" (click)="Salir()">Cerrar Sesion</a> </li>
             </ul>
 
 

@@ -1,0 +1,35 @@
+.cuadro {
+    height: 100px;
+}
+
+.iconos {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: bold;
+}
+
+.mat-icon {
+    font-size: 35px;
+}
+
+.icon {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    color: beige;
+}
+
+.letras {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    color: beige;
+}
+
+.bg {
+    background-color: #101010;
+    border-radius: 10px;
+    height: max-content;
+}
