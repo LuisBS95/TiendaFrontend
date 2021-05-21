@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material.module';
 import { ComponentModule } from './components/component.module';
 
+
+
 //Modulos especiales
 import { RouterModule } from '@angular/router';
 
