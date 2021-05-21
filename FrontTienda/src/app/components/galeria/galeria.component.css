@@ -13,5 +13,10 @@
 }
 
 .borde-img {
+    border-radius: solid 20px;
     border-color: aqua;
+}
+
+hr {
+    color: white;
 }
