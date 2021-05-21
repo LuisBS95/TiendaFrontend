@@ -1,0 +1,48 @@
+.titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-style: bold;
+}
+
+.slogan {
+    font-style: italic;
+    font-size: large;
+}
+
+.iconos {
+    /*Nazario, Gullit, Pele, Mofeta, Tripode, Profesor Philip, Padre Ricardo, Anaconda, Lurun, MAMUT*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: bold;
+}
+
+mat-icon {
+    font-size: 35px;
+    color: white;
+}
+
+.letras {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.bg {
+    background-color: deepskyblue;
+    border-radius: 10px;
+}
+
+.drop {
+    background-color: #0D0D0D;
+    color: gainsboro;
+}
+
+.dropa {
+    background-color: #0D0D0D;
+    color: gainsboro;
+    border-color: gainsboro;
+}
+
+.drop:hover {
+    background-color: gainsboro;
+    color: black;
+}

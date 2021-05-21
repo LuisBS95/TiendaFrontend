@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  isAutenticado:boolean= false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  Entrar(){
+    this.isAutenticado=true;
+  }
+  Salir(){
+    this.isAutenticado=false;
+  }
 }
