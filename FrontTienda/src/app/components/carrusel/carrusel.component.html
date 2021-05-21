@@ -1,0 +1,30 @@
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div *ngFor="let item of swiper" class="swiper-slide" [ngStyle]="{
+            'backgroung-size' : 'cover',
+            'background-image' :'url(../../../assets/img/carrusel1.jpg)'
+        }">
+
+
+            <div class="tattoo-description">
+                <h3>Titulo</h3>
+                <p>
+                    La descripcion bien berraca de los perros tatuajes mas vergueros del mundo
+                </p>
+            </div>
+        </div>
+
+        ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+</div>

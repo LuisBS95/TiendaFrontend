@@ -6,6 +6,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatButtonModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ],
   exports : [
     MatMenuModule,
     MatButtonModule,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
