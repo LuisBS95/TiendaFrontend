@@ -1,7 +1,7 @@
 <div class="row mb-5">
     <hr>
-    <h2 class="titulosGalerias">Nuevos Productos</h2>
-    <div *ngFor="let item of productos" class="col-12 col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center">
+    <h2 class="titulosGalerias">{{titulo}}</h2>
+    <div *ngFor="let item of productos" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 d-flex justify-content-center">
         <mat-card class="example-card my-3 fondo">
             <mat-card-header class="mb-1 d-flex align-items-center justify-content-center">
                 <div mat-card-avatar class="example-header-image align-self-start"></div>
@@ -15,9 +15,16 @@
                 </p>
             </mat-card-content>
             <mat-card-actions class="d-flex justify-content-center mb-1">
-                <button matTooltip="By default, I delay" type="button" class="btn btn-outline-primary ">Descripcion</button>
+                <button matTooltip="Mas informacion" type="button" class="btn btn-outline-primary ">Descripcion</button>
             </mat-card-actions>
         </mat-card>
+    </div>
+
+</div>
+
+<div class="row mb-5">
+    <div class="col text-center ">
+        <button matTooltip="Mas informacion" type="button" class="btn btn-outline-primary btn-lg btn-block ">Galeria</button>
     </div>
 
 </div>

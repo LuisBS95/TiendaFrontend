@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   showFiller = false;
-  categorias =[1,2,3,4];
+  categorias : String[]=["Realista","Gotico","Acuarela","Neoliberalista","Surrealista","Productos"];
   constructor() { }
 
   ngOnInit(): void {

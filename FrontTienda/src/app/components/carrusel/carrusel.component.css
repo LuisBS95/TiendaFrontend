@@ -1,5 +1,5 @@
 .swiper-container {
-    height: 330px;
+    height: 500px;
     width: 100%;
 }
 
@@ -21,4 +21,18 @@
 .tattoo-description h3 {
     color: blanchedalmond;
     text-align: center;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: 50%;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
