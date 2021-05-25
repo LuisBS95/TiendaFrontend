@@ -17,6 +17,7 @@
     border-color: aqua;
 }
 
-hr {
+hr,
+h2 {
     color: white;
 }

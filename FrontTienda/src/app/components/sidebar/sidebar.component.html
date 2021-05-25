@@ -1,17 +1,19 @@
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="" mode="side">
-        Categorias
-        <ul>
-            <li *ngFor="let a of categorias">
-                a)
+    <mat-drawer #drawer class="side" mode="side">
+        <ul class="mt-3 d-block">
+            <li class="item" *ngFor="let catego of categorias">
+
+                <p class="letras">{{catego}}</p>
+                <hr>
             </li>
+
         </ul>
 
     </mat-drawer>
 
-    <div class="">
+    <div class="boton">
         <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
+            <i class="fas fa-bars text-white"></i>
       </button>
     </div>
     <app-carrusel></app-carrusel>
