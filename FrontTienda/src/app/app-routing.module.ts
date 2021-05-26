@@ -5,8 +5,10 @@ import { AuthRoutingModule } from './Auth/auth.routing';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 const routes: Routes = [
+  
   { path: '', pathMatch: 'full' , redirectTo :'/home'},
   { path: '**',component:NopagefoundComponent }
+  
   
 ];
 

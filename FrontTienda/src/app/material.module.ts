@@ -13,8 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
-import {MatSelectModule} from '@angular/material/select'
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -32,6 +33,7 @@ import {MatSelectModule} from '@angular/material/select'
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
+    MatDialogModule,
     MatSelectModule
   ],
   exports : [
@@ -43,6 +45,7 @@ import {MatSelectModule} from '@angular/material/select'
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
+    MatDialogModule,
     MatSelectModule
   ]
 })
