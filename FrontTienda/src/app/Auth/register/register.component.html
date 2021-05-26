@@ -2,45 +2,121 @@
     Registro</h4>
 
 
-<form class="contenedor">
+<form class="contenedor form-row " [formGroup]="forma" (ngSubmit)="guardar() ">
 
-    <div>
-        <mat-form-field>
-            <mat-label>Nombre</mat-label>
-            <input matInput placeholder="Ex. Pepe">
-        </mat-form-field>
+
+
+    <!--NOMBRE Y APELLIDO-->
+
+    <mat-form-field class="col-12">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ex. Pepe" formControlName="nombre">
+        <mat-error *ngIf="nombreNoValido">
+            Por favor ingrese un nombre
+        </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="col-12">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Ex. Pérez" formControlName="apellido">
+        <mat-error *ngIf="apellidoNoValido">
+            Por favor ingrese un apellido
+        </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="col-12">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex. correo@gmail" formControlName="correo">
+        <mat-error *ngIf="correoNoValido">
+            Por favor ingrese un correo
+        </mat-error>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="col-12">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" placeholder="Contraseña" formControlName="pass1">
+        <mat-error *ngIf="pass1NoValido">
+            ingrese una contraseña minimo 6 caracteres
+        </mat-error>
+    </mat-form-field>
+
+
+
+
+    <mat-form-field class="col-12">
+        <mat-label>Repita Contraseña</mat-label>
+        <input matInput type="password" placeholder="Repita Contraseña" formControlName="pass2">
+        <small *ngIf="pass2NoValido">
+                La contraseña no es la misma
+            </small>
+    </mat-form-field>
+
+
+
+
+    <mat-form-field class="col-12">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="fecha">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="fechaNoValido">
+            ingrese su fecha de nacimiento
+        </mat-error>
+    </mat-form-field>
+
+
+    <!--DIRECCION-->
+    <div class="table-responsive col-12 ">
+
+        <table class=" table" cellspacing="0" formGroupName="direccion">
+            <tr>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Estado</mat-label>
+                        <mat-select [(ngModel)]="selectedItem" formControlName="estado">
+                            <mat-option *ngFor="let estado of estados" [value]="estado.name">
+                                {{estado.name}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="estadoNoValido">
+                            Por favor ingrese estado
+                        </mat-error>
+                    </mat-form-field>
+
+                </td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Dirección de la calle</mat-label>
+                        <input matInput placeholder="Dirección Postal" formControlName="calle">
+                        <mat-error *ngIf="calleNoValido">
+                            Por favor ingrese calle
+                        </mat-error>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Código Postal</mat-label>
+                        <input matInput placeholder="Ex. 0100" formControlName="cp">
+                        <mat-error *ngIf="cpNoValido">
+                            Por favor ingrese cp
+                        </mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
 
     </div>
 
     <div>
-        <mat-form-field>
-            <mat-label>Apellido</mat-label>
-            <input matInput placeholder="Ex. Pérez">
-        </mat-form-field>
+        <button mat-raised-button style="background-color:#2074e2;color: #fff">Registrar</button>
     </div>
 
-    <div>
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Ex. correo@gmail">
-        </mat-form-field>
-    </div>
-
-    <div>
-        <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="password">
-        </mat-form-field>
-    </div>
-
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Choose a date</mat-label>
-            <input matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-    </div>
 
 
 </form>
