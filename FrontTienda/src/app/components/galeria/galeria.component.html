@@ -8,11 +8,15 @@
                 <mat-card-title>Shiba Inu</mat-card-title>
 
             </mat-card-header>
-            <img mat-card-image class="borde-img" src="../../../assets/img/cafe.jpg" alt="">
+
+
+            <img mat-card-image (click)="openDetalle()" class="borde-img" src="../../../assets/img/cafe.jpg" alt="">
+
             <mat-card-content>
                 <p class="text-center">
                     The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
                 </p>
+
             </mat-card-content>
             <mat-card-actions class="d-flex justify-content-center mb-1">
                 <button matTooltip="Mas informacion" type="button" class="btn btn-outline-primary ">Descripcion</button>

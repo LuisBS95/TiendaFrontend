@@ -1,0 +1,16 @@
+.boton {
+    position: relative;
+    width: 100%;
+}
+
+.letra {
+    font-weight: bold;
+}
+
+.borde {
+    border-width: solid 5px;
+    border-top-color: red;
+    border-right-color: blue;
+    border-bottom-color: green;
+    border-left-color: blue;
+}

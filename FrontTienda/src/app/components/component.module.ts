@@ -9,15 +9,25 @@ import { GaleriaComponent } from './galeria/galeria.component';
 import { SwiperModule } from 'swiper/angular';
 import { CarruselComponent } from './carrusel/carrusel.component';
 
+import { DetalleComponent } from './detalle/detalle.component';
+import { SliderDetallesComponent } from './slider-detalles/slider-detalles.component';
+import { ProductoComponent } from './producto/producto.component';
+
 
 
 @NgModule({
+  entryComponents: [
+    DetalleComponent
+  ],
   declarations: [
     SliderComponent,
     SidebarComponent,
     BuscadorComponent,
     GaleriaComponent,
-    CarruselComponent
+    CarruselComponent,
+    DetalleComponent,
+    SliderDetallesComponent,
+    ProductoComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +39,7 @@ import { CarruselComponent } from './carrusel/carrusel.component';
     SliderComponent,
     BuscadorComponent,
     GaleriaComponent,
-    CarruselComponent]
+    CarruselComponent,
+    SliderDetallesComponent]
 })
 export class ComponentModule { }
