@@ -12,7 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { MaterialModule } from './material.module';
 import { ComponentModule } from './components/component.module';
 
-
+import { HttpClientModule} from '@angular/common/http';
 
 //Modulos especiales
 import { RouterModule } from '@angular/router';
@@ -33,7 +33,8 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     MaterialModule,
     ComponentModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
