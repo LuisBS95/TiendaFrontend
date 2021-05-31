@@ -15,6 +15,8 @@ import { SliderDetallesComponent } from './slider-detalles/slider-detalles.compo
 import { ProductoComponent } from './producto/producto.component';
 import { RouterModule } from '@angular/router';
 import { SliderProdComponent } from './slider-prod/slider-prod.component';
+import { GaleriaCategoComponent } from './galeria-catego/galeria-catego.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 
@@ -31,7 +33,9 @@ import { SliderProdComponent } from './slider-prod/slider-prod.component';
     DetalleComponent,
     SliderDetallesComponent,
     ProductoComponent,
-    SliderProdComponent
+    SliderProdComponent,
+    GaleriaCategoComponent,
+    MapaComponent
   ],
   imports: [
     CommonModule,
@@ -46,6 +50,8 @@ import { SliderProdComponent } from './slider-prod/slider-prod.component';
     GaleriaComponent,
     CarruselComponent,
     SliderDetallesComponent,
-    SliderProdComponent]
+    SliderProdComponent,
+    GaleriaCategoComponent,
+    MapaComponent]
 })
 export class ComponentModule { }

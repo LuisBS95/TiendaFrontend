@@ -1,3 +1,8 @@
+/*.head {
+    overflow: visible;
+    position: fixed;
+}*/
+
 .titulo {
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;

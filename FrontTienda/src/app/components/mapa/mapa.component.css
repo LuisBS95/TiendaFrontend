@@ -1,0 +1,141 @@
+.mapa {
+    width: 2000px;
+    margin: auto;
+    color: white;
+}
+
+.ubicacion {
+    padding: 60px 0;
+    margin-bottom: 150px;
+}
+
+.main .ubicacion .titulo {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.main .ubicacion .horarios {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.main .ubicacion .direccion .calle {
+    margin-bottom: 15px;
+}
+
+.main .ubicacion .horarios {
+    overflow: hidden;
+}
+
+.main .ubicacion .horarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.main .mapa {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe {
+    width: 100%;
+    max-height: 600px;
+}
+
+p,
+h3,
+h4,
+hr {
+    color: white;
+}
+
+
+/* ----- ----- FOOTER ----- ----- */
+
+@media screen and (max-width: 800px) {
+    header .contenedor {
+        position: static;
+        height: auto;
+    }
+    header .textos {
+        position: static;
+        margin: 100px 0;
+    }
+    header .menu {
+        text-align: center;
+    }
+    header .menu a {
+        margin: 10px 20px;
+    }
+    header .textos .nombre {
+        font-size: 30px;
+    }
+    header .textos h3 {
+        font-size: 18px;
+    }
+    .main .acerca-de .foto {
+        position: relative;
+        width: 100%;
+    }
+    .main .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+    .main .menu {
+        padding-top: 300px;
+    }
+    .main .menu article {
+        width: 100%;
+    }
+    .main .galeria .foto {
+        width: 50%;
+    }
+    .main .mapa {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+    .main .menu article .nombre,
+    .main .menu article .precio {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios {
+        width: 100%;
+        text-align: center;
+    }
+    .main .ubicacion .direccion {
+        margin-bottom: 20px;
+    }
+    .main .ubicacion .horarios .entre-semana,
+    .main .ubicacion .horarios .fin-semana {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
