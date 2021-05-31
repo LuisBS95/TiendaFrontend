@@ -1,0 +1,43 @@
+<div class="container my-5">
+    <div class="row mb-5">
+
+        <h2 class="titulosGalerias">{{titulo}}</h2>
+        <div *ngFor="let item of productos" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center ">
+            <mat-card class="example-card my-3 fondo borde">
+                <mat-card-header class="mb-1 d-flex align-items-center justify-content-center">
+                    <div mat-card-avatar class="example-header-image align-self-start"></div>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+
+                </mat-card-header>
+
+
+                <img mat-card-image (click)="openDetalle()" class="borde-img" src="../../../assets/img/cafe.jpg" alt="">
+
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-center text-white font-weight-bold">Precio:</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center text-white">$1220</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center text-white font-weight-bold">Medidas:</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-center text-white">300x300 cm</p>
+                        </div>
+                    </div>
+
+                </mat-card-content>
+                <mat-card-actions class="d-flex justify-content-center mb-1">
+                    <button [routerLink]="['/home','producto',1]" matTooltip="Mas informacion" type="button" class="btn btn-outline-primary ">Descripcion</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </div>
+
+
+
+</div>

@@ -1,0 +1,37 @@
+.example-card {
+    max-width: 250px;
+    color: white;
+}
+
+.example-header-image {
+    background-image: url('../../../assets/img/logo.jpg');
+    background-size: cover;
+}
+
+.fondo {
+    background-color: #000000;
+}
+
+.borde-img {
+    border-radius: solid 20px;
+    border-color: aqua;
+    cursor: pointer;
+}
+
+hr,
+h2 {
+    color: white;
+}
+
+p {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.borde:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: turquoise;
+    border-radius: 10px;
+}
