@@ -2,7 +2,7 @@
     Registro</h4>
 
 
-<form class="contenedor form-row " [formGroup]="forma" (ngSubmit)="guardar() ">
+<form class="contenedor form-row " [formGroup]="forma" (ngSubmit)="guardar ()">
 
 
 
@@ -10,7 +10,7 @@
 
     <mat-form-field class="col-12">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Ex. Pepe" formControlName="nombre">
+        <input matInput placeholder="Ex. Pepe" [(ngModel)]="newUsuario.nombre" formControlName="nombre">
         <mat-error *ngIf="nombreNoValido">
             Por favor ingrese un nombre
         </mat-error>
@@ -20,7 +20,7 @@
 
     <mat-form-field class="col-12">
         <mat-label>Apellido</mat-label>
-        <input matInput placeholder="Ex. Pérez" formControlName="apellido">
+        <input matInput placeholder="Ex. Pérez" [(ngModel)]="newUsuario.apellido" formControlName="apellido">
         <mat-error *ngIf="apellidoNoValido">
             Por favor ingrese un apellido
         </mat-error>
@@ -30,7 +30,7 @@
 
     <mat-form-field class="col-12">
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Ex. correo@gmail" formControlName="correo">
+        <input matInput placeholder="Ex. correo@gmail" [(ngModel)]="newUsuario.email" formControlName="email">
         <mat-error *ngIf="correoNoValido">
             Por favor ingrese un correo
         </mat-error>
@@ -40,7 +40,7 @@
 
     <mat-form-field class="col-12">
         <mat-label>Contraseña</mat-label>
-        <input matInput type="password" placeholder="Contraseña" formControlName="pass1">
+        <input matInput type="password" placeholder="Contraseña" [(ngModel)]="newUsuario.password" formControlName="password">
         <mat-error *ngIf="pass1NoValido">
             ingrese una contraseña minimo 6 caracteres
         </mat-error>
@@ -52,9 +52,10 @@
     <mat-form-field class="col-12">
         <mat-label>Repita Contraseña</mat-label>
         <input matInput type="password" placeholder="Repita Contraseña" formControlName="pass2">
-        <small *ngIf="pass2NoValido">
-                La contraseña no es la misma
-            </small>
+        <mat-error *ngIf="pass2NoValido">
+            La contraseña no es la misma
+        </mat-error>
+
     </mat-form-field>
 
 
@@ -62,7 +63,7 @@
 
     <mat-form-field class="col-12">
         <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="fecha">
+        <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" [(ngModel)]="newUsuario.fechaNacimiento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
         <mat-error *ngIf="fechaNoValido">
@@ -116,6 +117,8 @@
     <div>
         <button mat-raised-button style="background-color:#2074e2;color: #fff">Registrar</button>
     </div>
+
+
 
 
 

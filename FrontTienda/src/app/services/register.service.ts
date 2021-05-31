@@ -14,9 +14,6 @@ export class RegisterService {
   constructor() { }
 
 
-
-
-
   passwordsIguales( pass1Name: string, pass2Name: string ) {
 
     return ( formGroup: FormGroup ) => {
@@ -33,6 +30,8 @@ export class RegisterService {
     }
 
   }
+
+
 
 
 }
