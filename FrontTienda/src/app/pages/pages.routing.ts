@@ -19,7 +19,8 @@ const routes: Routes = [
     children: [
         {path:'' , component : HomeComponent},
         {path:'producto/:id' , component : ProductoComponent}
-    ]}
+    ]},
+    
 
 ];
 

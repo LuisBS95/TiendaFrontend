@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { SliderComponent } from './slider/slider.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -12,6 +13,8 @@ import { CarruselComponent } from './carrusel/carrusel.component';
 import { DetalleComponent } from './detalle/detalle.component';
 import { SliderDetallesComponent } from './slider-detalles/slider-detalles.component';
 import { ProductoComponent } from './producto/producto.component';
+import { RouterModule } from '@angular/router';
+import { SliderProdComponent } from './slider-prod/slider-prod.component';
 
 
 
@@ -27,12 +30,14 @@ import { ProductoComponent } from './producto/producto.component';
     CarruselComponent,
     DetalleComponent,
     SliderDetallesComponent,
-    ProductoComponent
+    ProductoComponent,
+    SliderProdComponent
   ],
   imports: [
     CommonModule,
     SwiperModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
     
   ],
   exports:[SidebarComponent,
@@ -40,6 +45,7 @@ import { ProductoComponent } from './producto/producto.component';
     BuscadorComponent,
     GaleriaComponent,
     CarruselComponent,
-    SliderDetallesComponent]
+    SliderDetallesComponent,
+    SliderProdComponent]
 })
 export class ComponentModule { }
