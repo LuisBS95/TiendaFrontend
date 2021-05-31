@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from 'src/app/services/register.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { UsuarioDTOModel } from '../../dtos/usuarioDTO.model';
 
 
 
@@ -14,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
   forma: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder, private validadores: RegisterService) { 
+  constructor(private fb: FormBuilder, private validadores: RegisterService, private usuario: UsuarioService) { 
     
     this.crearFormulario();
      // Posteo de información
@@ -33,22 +35,22 @@ export class RegisterComponent implements OnInit {
     return this.forma.get('apellido')?.invalid && this.forma.get('apellido')?.touched
   }
   get correoNoValido(){
-    return this.forma.get('correo')?.invalid && this.forma.get('correo')?.touched
+    return this.forma.get('email')?.invalid && this.forma.get('email')?.touched
   }
 
   get pass1NoValido() {
-    return this.forma.get('pass1')?.invalid && this.forma.get('pass1')?.touched;
+    return this.forma.get('password')?.invalid && this.forma.get('password')?.touched;
   }
 
   get pass2NoValido() {
-    const pass1 = this.forma.get('pass1')?.value;
+    const pass1 = this.forma.get('password')?.value;
     const pass2 = this.forma.get('pass2')?.value;
 
     return ( pass1 === pass2 ) ? false : true;
   }
 
   get fechaNoValido() {
-    return this.forma.get('fecha')?.invalid && this.forma.get('fecha')?.touched
+    return this.forma.get('fechaNacimiento')?.invalid && this.forma.get('fechaNacimiento')?.touched
   }
   
   get estadoNoValido() {
@@ -68,10 +70,10 @@ export class RegisterComponent implements OnInit {
     this.forma = this.fb.group({
       nombre: ['',Validators.required],
       apellido: ['',Validators.required],
-      correo: ['',[Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
-      pass1   : ['', [Validators.required, Validators.minLength(6) ]],
+      email: ['',[Validators.required,Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
+      password   : ['', [Validators.required, Validators.minLength(6) ]],
       pass2   : ['', Validators.required ],
-      fecha   : ['', Validators.required],
+      fechaNacimiento   : ['', Validators.required],
       direccion: this.fb.group({
         estado: ['', Validators.required ],
         calle  : ['', Validators.required ],
@@ -79,7 +81,7 @@ export class RegisterComponent implements OnInit {
       })
     },
     {
-      validators: this.validadores.passwordsIguales('pass1','pass2')
+      validators: this.validadores.passwordsIguales('password','pass2')
     });
 
   }
@@ -97,6 +99,9 @@ export class RegisterComponent implements OnInit {
     { name: 'GUERRERO' },
   ];
 
+
+  // GUARDAR
+   newUsuario : UsuarioDTOModel = new UsuarioDTOModel();
   guardar(){
 
     console.log(this.forma);
@@ -116,7 +121,16 @@ export class RegisterComponent implements OnInit {
      
     }
 
+    this.usuario.crearUsuario(this.forma.value).subscribe(city => console.log(city));
     
+  }
+
+  //GUARDAR USUARIO PRUEBA
+  saveUsuario(){
+    
+    var newUsuario = new UsuarioDTOModel();
+    newUsuario.idUsuario = 1200000;
+    this.usuario.crearUsuario(newUsuario).subscribe(city => console.log(city));
     
   }
 
