@@ -46,3 +46,17 @@ mat-icon {
     background-color: gainsboro;
     color: black;
 }
+
+.logo {
+    width: 100px;
+    height: 80px;
+    background-image: url("../../../assets/img/cafe.jpg");
+    background-size: cover;
+}
+
+.borde:hover {
+    border-style: solid;
+    border-width: 3px;
+    border-color: turquoise;
+    border-radius: 10px;
+}

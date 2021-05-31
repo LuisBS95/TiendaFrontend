@@ -15,4 +15,8 @@ export class DetalleComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeModal(){
+    this.dialogRef.close('Aqui enviamos la info del modal');
+  }
+
 }
