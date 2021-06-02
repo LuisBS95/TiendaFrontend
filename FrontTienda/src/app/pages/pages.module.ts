@@ -11,13 +11,15 @@ import { ComponentModule } from '../components/component.module';
 //Modulos Angular
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PresupuestoComponent } from './presupuesto/presupuesto.component';
 
 
 
 
 @NgModule({
   declarations: [PagesComponent,
-  HomeComponent],
+  HomeComponent,
+  PresupuestoComponent],
   imports: [
     CommonModule,
     RouterModule,

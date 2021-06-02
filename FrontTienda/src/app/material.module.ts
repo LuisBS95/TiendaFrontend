@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 
 import {MatSelectModule} from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -35,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ],
   exports : [
     MatMenuModule,
@@ -47,7 +49,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }

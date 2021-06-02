@@ -1,0 +1,20 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.color {
+    background-color: azure;
+}
+
+h2 {
+    color: azure;
+    font-size: x-large;
+    font-family: 'Suez One', serif;
+    font-style: italic;
+}
+
+.titulo {
+    font-size: large;
+}
