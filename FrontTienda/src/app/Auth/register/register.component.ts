@@ -52,18 +52,7 @@ export class RegisterComponent implements OnInit {
   get fechaNoValido() {
     return this.forma.get('fechaNacimiento')?.invalid && this.forma.get('fechaNacimiento')?.touched
   }
-  
-  get estadoNoValido() {
-    return this.forma.get('direccion.estado')?.invalid && this.forma.get('direccion.estado')?.touched
-  }
-  get calleNoValido() {
-    return this.forma.get('direccion.calle')?.invalid && this.forma.get('direccion.calle')?.touched
-  }
-
-  get cpNoValido() {
-    return this.forma.get('direccion.cp')?.invalid && this.forma.get('direccion.cp')?.touched
-  }
-
+ 
 
 
   crearFormulario(){
@@ -74,11 +63,7 @@ export class RegisterComponent implements OnInit {
       password   : ['', [Validators.required, Validators.minLength(6) ]],
       pass2   : ['', Validators.required ],
       fechaNacimiento   : ['', Validators.required],
-      direccion: this.fb.group({
-        estado: ['', Validators.required ],
-        calle  : ['', Validators.required ],
-        cp  : ['', Validators.required ],
-      })
+      
     },
     {
       validators: this.validadores.passwordsIguales('password','pass2')
@@ -86,18 +71,6 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  //SELECTOR 
-  selectedItem: string = '';
-
-  estados: any[] = [
-    { name: 'CDMX' },
-    { name: 'ESTADO DE MÉXICO' },
-    { name: 'PUEBLA' },
-    { name: 'MORELOS' },
-    { name: 'NUEVO LEÓN' },
-    { name: 'QUINTANA ROO' },
-    { name: 'GUERRERO' },
-  ];
 
 
   // GUARDAR
