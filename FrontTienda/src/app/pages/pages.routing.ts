@@ -4,6 +4,7 @@ import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { ProductoComponent } from '../components/producto/producto.component';
 import { GaleriaCategoComponent } from '../components/galeria-catego/galeria-catego.component';
+import { PresupuestoComponent } from './presupuesto/presupuesto.component';
 
 
 
@@ -20,7 +21,8 @@ const routes: Routes = [
     children: [
         {path:'' , component : HomeComponent},
         {path:'producto/:id' , component : ProductoComponent},
-        {path:'galeria/:id' , component : GaleriaCategoComponent}
+        {path:'galeria/:id' , component : GaleriaCategoComponent},
+        {path:'presupuestos', component:PresupuestoComponent}
     ]},
     
 
