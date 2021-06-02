@@ -1,4 +1,4 @@
-import { DireccionModel } from "../models/direccion.model";
+
 
  export class UsuarioDTOModel{
 
@@ -10,6 +10,5 @@ import { DireccionModel } from "../models/direccion.model";
     email: string='';
 	fechaNacimiento: string='';
 	password: string='';
-    direccion: DireccionModel = new DireccionModel;
 
 }

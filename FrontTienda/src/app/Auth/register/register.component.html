@@ -72,47 +72,7 @@
     </mat-form-field>
 
 
-    <!--DIRECCION-->
-    <div class="table-responsive col-12 ">
 
-        <table class=" table" cellspacing="0" formGroupName="direccion">
-            <tr>
-                <td>
-                    <mat-form-field>
-                        <mat-label>Estado</mat-label>
-                        <mat-select [(ngModel)]="selectedItem" formControlName="estado">
-                            <mat-option *ngFor="let estado of estados" [value]="estado.name">
-                                {{estado.name}}
-                            </mat-option>
-                        </mat-select>
-                        <mat-error *ngIf="estadoNoValido">
-                            Por favor ingrese estado
-                        </mat-error>
-                    </mat-form-field>
-
-                </td>
-                <td>
-                    <mat-form-field>
-                        <mat-label>Dirección de la calle</mat-label>
-                        <input matInput placeholder="Dirección Postal" formControlName="calle">
-                        <mat-error *ngIf="calleNoValido">
-                            Por favor ingrese calle
-                        </mat-error>
-                    </mat-form-field>
-                </td>
-                <td>
-                    <mat-form-field>
-                        <mat-label>Código Postal</mat-label>
-                        <input matInput placeholder="Ex. 0100" formControlName="cp">
-                        <mat-error *ngIf="cpNoValido">
-                            Por favor ingrese cp
-                        </mat-error>
-                    </mat-form-field>
-                </td>
-            </tr>
-        </table>
-
-    </div>
 
     <div>
         <button mat-raised-button style="background-color:#2074e2;color: #fff">Registrar</button>
