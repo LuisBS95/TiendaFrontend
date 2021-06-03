@@ -8,13 +8,16 @@
     background-color: azure;
 }
 
-h2 {
-    color: azure;
-    font-size: x-large;
+.titulo {
     font-family: 'Suez One', serif;
-    font-style: italic;
+    font-size: xx-large;
 }
 
-.titulo {
-    font-size: large;
+.margen {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.mar {
+    margin-bottom: 30px;
 }

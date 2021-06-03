@@ -11,5 +11,8 @@ export class PresupuestoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  presupuesto(){
+    
+  }
 
 }
